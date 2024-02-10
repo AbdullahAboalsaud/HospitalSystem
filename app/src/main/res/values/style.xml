@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="inputLayout">
+        <item name="boxCornerRadiusTopStart">@dimen/_8sdp</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/_8sdp</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/_8sdp</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/_8sdp</item>
+    </style>
+
+</resources>
