@@ -6,7 +6,7 @@
     app:startDestination="@id/loginFragment">
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.medicalapp.ui.mainUi.LoginFragment"
+        android:name="com.example.hospitalsystem.ui.auth.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
 
@@ -18,7 +18,7 @@
     </fragment>
     <fragment
         android:id="@+id/specialistFragment"
-        android:name="com.example.medicalapp.ui.mainUi.SpecialistFragment"
+        android:name="com.example.hospitalsystem.ui.hr.SpecialistFragment"
         android:label="fragment_specialist"
         tools:layout="@layout/fragment_specialist" >
         <action
@@ -27,7 +27,7 @@
     </fragment>
     <fragment
         android:id="@+id/employeeFragment"
-        android:name="com.example.medicalapp.ui.mainUi.EmployeeFragment"
+        android:name="com.example.hospitalsystem.ui.hr.EmployeeFragment"
         android:label="fragment_employee"
         tools:layout="@layout/fragment_employee" >
         <action
@@ -39,17 +39,17 @@
     </fragment>
     <fragment
         android:id="@+id/userFragment"
-        android:name="com.example.medicalapp.ui.mainUi.UserFragment"
+        android:name="com.example.hospitalsystem.ui.hr.UserFragment"
         android:label="fragment_user"
         tools:layout="@layout/fragment_user" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.medicalapp.ui.mainUi.hr.ProfileFragment"
+        android:name="com.example.hospitalsystem.ui.hr.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/hrFragment"
-        android:name="com.example.medicalapp.ui.mainUi.HrFragment"
+        android:name="com.example.hospitalsystem.ui.hr.HrFragment"
         android:label="fragment_hr"
         tools:layout="@layout/fragment_hr" >
         <action

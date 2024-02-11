@@ -3,7 +3,7 @@ package com.example.medicalapp.ui.mainUi.adapters
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import com.example.medicalapp.databinding.ItemEmployeeNamesBinding
+import com.example.hospitalsystem.databinding.ItemEmployeeNamesBinding
 
 class AdapterRecyclerEmployeeNames: RecyclerView.Adapter<AdapterRecyclerEmployeeNames.Holder>() {
 

@@ -1,4 +1,4 @@
-package com.example.hospitalsystem
+package com.example.hospitalsystem.ui.auth
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,7 +9,6 @@ import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.hospitalsystem.R
 import com.example.hospitalsystem.databinding.FragmentLoginBinding
-import com.example.medicalapp.ui.mainUi.LoginFragmentDirections
 
 
 class LoginFragment : Fragment() {

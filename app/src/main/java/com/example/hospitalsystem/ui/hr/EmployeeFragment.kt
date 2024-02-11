@@ -1,4 +1,4 @@
-package com.example.hospitalsystem
+package com.example.hospitalsystem.ui.hr
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,13 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.hospitalsystem.databinding.FragmentUserBinding
+import com.example.hospitalsystem.R
+import com.example.hospitalsystem.databinding.FragmentEmployeeBinding
 
 
-class UserFragment : Fragment() {
-
-    private var _binding: FragmentUserBinding? = null
+class EmployeeFragment : Fragment() {
+    private var _binding: FragmentEmployeeBinding? = null
     private val binding get() = _binding!!
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,12 +25,22 @@ class UserFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_user, container, false)
+        return inflater.inflate(R.layout.fragment_employee, container, false)
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        _binding = FragmentUserBinding.bind(view)
+        _binding = FragmentEmployeeBinding.bind(view)
 
+        binding.recyclerEmployees.setOnClickListener {
+            findNavController().navigate(
+                EmployeeFragmentDirections.actionEmployeeFragmentToProfileFragment()
+            )
+        }
+        binding.btnAdd.setOnClickListener {
+            findNavController().navigate(
+                EmployeeFragmentDirections.actionEmployeeFragmentToUserFragment()
+            )
+        }
         binding.btnBack.setOnClickListener{
             findNavController().navigateUp()
         }

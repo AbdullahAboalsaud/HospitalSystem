@@ -1,4 +1,4 @@
-package com.example.medicalapp.ui.mainUi.hr
+package com.example.hospitalsystem.ui.hr
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,9 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.example.medicalapp.R
-import com.example.medicalapp.databinding.FragmentHrBinding
-import com.example.medicalapp.databinding.FragmentProfileBinding
+import com.example.hospitalsystem.R
+import com.example.hospitalsystem.databinding.FragmentProfileBinding
 
 
 class ProfileFragment : Fragment() {

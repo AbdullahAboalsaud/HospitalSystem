@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
-    <style name="inputLayout">
-        <item name="boxCornerRadiusTopStart">@dimen/_8sdp</item>
+    <style name="inputLayoutStyle">
         <item name="boxCornerRadiusTopEnd">@dimen/_8sdp</item>
-        <item name="boxCornerRadiusBottomStart">@dimen/_8sdp</item>
         <item name="boxCornerRadiusBottomEnd">@dimen/_8sdp</item>
+        <item name="boxCornerRadiusTopStart">@dimen/_8sdp</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/_8sdp</item>
+        <item name="boxStrokeColor">@color/mintGreen</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="android:textColorHint">@color/dark_gray</item>
+        <item name="startIconTint">@color/mintGreen</item>
+        <item name="hintEnabled">false</item>
+        <item name="boxStrokeWidthFocused">1.5dp</item>
+        <item name="hintTextColor">@color/mintGreen</item>
+        <item name="passwordToggleTint">@color/mintGreen</item>
     </style>
+
+
 
 </resources>
