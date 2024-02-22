@@ -33,6 +33,7 @@
     <string name="singel">Single</string>
     <string name="mail">abdullahbendary7@gmail.com</string>
     <string name="create_user">Create user</string>
+    <string name="required">Required</string>
     <string name="login_error_message">Check your phone number and password</string>
 
 </resources>

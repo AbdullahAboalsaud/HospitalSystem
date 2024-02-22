@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav"
-    app:startDestination="@id/loginFragment">
+    app:startDestination="@id/employeeFragment">
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.hospitalsystem.ui.auth.LoginFragment"
@@ -15,6 +15,9 @@
             app:destination="@id/hrFragment"
             app:popUpTo="@id/nav"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_specialistFragment"
+            app:destination="@id/specialistFragment" />
     </fragment>
     <fragment
         android:id="@+id/specialistFragment"

@@ -3,6 +3,7 @@
     <style name="Base.Theme.HospitalSystem" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/mintGreen</item>
     </style>
 
     <style name="Theme.HospitalSystem" parent="Base.Theme.HospitalSystem" />
