@@ -1,7 +1,6 @@
 package com.example.hospitalsystem.network
 
-
-import com.example.hospitalsystem.utils.Const.BASE_URL
+import com.example.hospitalsystem.utils.BASE_URL
 import com.example.hospitalsystem.utils.MySharedPreferences
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient

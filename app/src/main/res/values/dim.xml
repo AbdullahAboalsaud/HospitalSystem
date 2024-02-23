@@ -2,7 +2,7 @@
 <resources>
 
     <dimen name="text_header_size">@dimen/_16sdp</dimen>
-    <dimen name="text_sub_header">@dimen/_12sdp</dimen>
+    <dimen name="text_sub_header">@dimen/_14sdp</dimen>
     <dimen name="text_content_size">@dimen/_11sdp</dimen>
     <dimen name="text_very_small">@dimen/_9sdp</dimen>
     <dimen name="margin_horizontal_size">@dimen/_14sdp</dimen>

@@ -35,5 +35,12 @@
     <string name="create_user">Create user</string>
     <string name="required">Required</string>
     <string name="login_error_message">Check your phone number and password</string>
+    <string name="category">Category</string>
+    <string name="send_call">Send Call</string>
+    <string name="age">Age</string>
+    <string name="create_call">Create Call</string>
+    <string name="patient_name">Patient Name</string>
+    <string name="phone">Phone</string>
+    <string name="select_doctor">Select Doctor</string>
 
 </resources>

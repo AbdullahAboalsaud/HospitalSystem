@@ -6,11 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.hospitalsystem.R
-import com.example.hospitalsystem.adapters.AdapterRecyclerTypes
-import com.example.hospitalsystem.data.ModelCategory
 import com.example.hospitalsystem.databinding.FragmentUserBinding
-import com.example.hospitalsystem.utils.Const
+
 
 
 class UserFragment : Fragment() {

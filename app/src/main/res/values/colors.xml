@@ -33,4 +33,6 @@
 
     <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#D6D6D6</color>
 
+
+    <color name="text_header">#343434</color>
 </resources>

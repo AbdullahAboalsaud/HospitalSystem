@@ -158,7 +158,8 @@
         android:layout_height="wrap_content"
         android:indeterminate="true"
         android:indeterminateTint="@color/mintGreen"
-        android:visibility="visible"
+        android:layout_marginTop="@dimen/_1sdp"
+        android:visibility="gone"
         app:layout_constraintTop_toTopOf="parent"
         />
 

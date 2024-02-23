@@ -1,6 +1,7 @@
 package com.example.hospitalsystem.adapters
 
 import android.graphics.drawable.ColorDrawable
+import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
@@ -17,13 +18,14 @@ class AdapterRecyclerTypes : RecyclerView.Adapter<AdapterRecyclerTypes.TypesView
     inner class TypesViewHolder(val binding: ItemTabsBinding) : ViewHolder(binding.root) {
         fun bind(data: ModelCategory, isSelected: Boolean) {
             binding.apply {
-                btnCategory.text = data.title
+                tvCategory.text = data.title
                 if (isSelected) {
-                    btnCategory.background =
+                    tvCategory.background =
                         ColorDrawable(itemView.context.resources.getColor(R.color.mintGreen))
+                    tvCategory.resources.getColor(R.color.white)
                 } else {
-                    btnCategory.background =
-                        ColorDrawable(itemView.context.resources.getColor(R.color.white))
+                    tvCategory.setBackgroundResource(R.drawable.item_tab_background)
+                    tvCategory.resources.getColor(R.color.black)
                 }
 
             }
@@ -63,7 +65,7 @@ class AdapterRecyclerTypes : RecyclerView.Adapter<AdapterRecyclerTypes.TypesView
     override fun onBindViewHolder(holder: TypesViewHolder, position: Int) {
         val data = differ.currentList[position]
         holder.bind(data, selectedPosition == position)
-        holder.binding.btnCategory.setOnClickListener {
+        holder.binding.tvCategory.setOnClickListener {
             if (selectedPosition > 0) {
                 notifyItemChanged(selectedPosition)
             }

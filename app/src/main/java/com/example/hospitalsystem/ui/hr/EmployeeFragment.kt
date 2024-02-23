@@ -10,7 +10,13 @@ import com.example.hospitalsystem.R
 import com.example.hospitalsystem.adapters.AdapterRecyclerTypes
 import com.example.hospitalsystem.data.ModelCategory
 import com.example.hospitalsystem.databinding.FragmentEmployeeBinding
-import com.example.hospitalsystem.utils.Const
+import com.example.hospitalsystem.utils.ALL
+import com.example.hospitalsystem.utils.ANALYSIS
+import com.example.hospitalsystem.utils.DOCTOR
+import com.example.hospitalsystem.utils.HR
+import com.example.hospitalsystem.utils.MANAGER
+import com.example.hospitalsystem.utils.NURSE
+import com.example.hospitalsystem.utils.RECEPTIONIST
 
 
 class EmployeeFragment : Fragment() {
@@ -33,13 +39,13 @@ class EmployeeFragment : Fragment() {
 
         var typesList = ArrayList<ModelCategory>()
 
-        typesList.add(ModelCategory(Const.ALL))
-        typesList.add(ModelCategory(Const.DOCTOR))
-        typesList.add(ModelCategory(Const.HR))
-        typesList.add(ModelCategory(Const.NURSE))
-        typesList.add(ModelCategory(Const.RECEPTIONIST))
-        typesList.add(ModelCategory(Const.MANAGER))
-        typesList.add(ModelCategory(Const.ANALYSIS))
+        typesList.add(ModelCategory(ALL))
+        typesList.add(ModelCategory(DOCTOR))
+        typesList.add(ModelCategory(HR))
+        typesList.add(ModelCategory(NURSE))
+        typesList.add(ModelCategory(RECEPTIONIST))
+        typesList.add(ModelCategory(MANAGER))
+        typesList.add(ModelCategory(ANALYSIS))
 
         typesAdapter.differ.submitList(typesList)
         binding.recyclerTabs.adapter=typesAdapter
