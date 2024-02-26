@@ -222,6 +222,7 @@
                 app:layout_constraintStart_toStartOf="@id/spinnerSpecialist"
                 app:layout_constraintTop_toTopOf="@id/spinnerSpecialist" />
 
+
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/dateOfBirth"
                 android:layout_width="0dp"

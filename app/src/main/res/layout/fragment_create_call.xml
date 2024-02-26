@@ -63,7 +63,6 @@
             android:layout_height="wrap_content"
             android:drawablePadding="15dp"
             android:hint="@string/age"
-
             android:inputType="text"
             android:maxLines="1"
             android:textColorHint="@color/gray"
@@ -136,9 +135,7 @@
         android:layout_marginTop="@dimen/_20sdp"
         android:paddingVertical="@dimen/_10sdp"
         android:text="@string/send_call"
-        android:textSize="@dimen/_13sdp"
-        app:backgroundTint="#06CAB8"
-        app:cornerRadius="@dimen/_6sdp"
+        style="@style/button"
         app:layout_constraintEnd_toEndOf="@id/edtCaseDescription"
         app:layout_constraintStart_toStartOf="@+id/edtCaseDescription"
         app:layout_constraintTop_toBottomOf="@id/edtCaseDescription" />
