@@ -6,10 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.hospitalsystem.R
 import com.example.hospitalsystem.adapters.AdapterRecyclerTypes
 import com.example.hospitalsystem.data.ModelCategory
-import com.example.hospitalsystem.databinding.FragmentEmployeeBinding
+import com.example.hospitalsystem.databinding.FragmentEmployeeListBinding
 import com.example.hospitalsystem.utils.ALL
 import com.example.hospitalsystem.utils.ANALYSIS
 import com.example.hospitalsystem.utils.DOCTOR
@@ -19,26 +18,60 @@ import com.example.hospitalsystem.utils.NURSE
 import com.example.hospitalsystem.utils.RECEPTIONIST
 
 
-class EmployeeFragment : Fragment() {
-    private var _binding: FragmentEmployeeBinding? = null
+class EmployeeListFragment : Fragment() {
+    private var _binding: FragmentEmployeeListBinding? = null
     private val binding get() = _binding!!
+    private var typesList = ArrayList<ModelCategory>()
 
     private val typesAdapter by lazy { AdapterRecyclerTypes() }
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_employee, container, false)
+    ): View {
+        _binding = FragmentEmployeeListBinding.inflate(inflater)
+        return binding.root
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        _binding = FragmentEmployeeBinding.bind(view)
 
-        var typesList = ArrayList<ModelCategory>()
+        importTypesList()
+        typesAdapter.differ.submitList(typesList)
+        binding.recyclerTabs.adapter=typesAdapter
 
+        observe()
+
+        navigation()
+
+
+
+
+    }
+
+    private fun observe() {
+
+    }
+
+    private fun navigation(){
+        binding.recyclerEmployees.setOnClickListener {
+            findNavController().navigate(
+                EmployeeListFragmentDirections.actionEmployeeFragmentToProfileFragment()
+            )
+        }
+
+        binding.btnAdd.setOnClickListener {
+            findNavController().navigate(
+                EmployeeListFragmentDirections.actionEmployeeFragmentToUserFragment()
+            )
+        }
+
+        binding.btnBack.setOnClickListener{
+            findNavController().navigateUp()
+        }
+    }
+
+    private fun importTypesList(){
         typesList.add(ModelCategory(ALL))
         typesList.add(ModelCategory(DOCTOR))
         typesList.add(ModelCategory(HR))
@@ -46,24 +79,13 @@ class EmployeeFragment : Fragment() {
         typesList.add(ModelCategory(RECEPTIONIST))
         typesList.add(ModelCategory(MANAGER))
         typesList.add(ModelCategory(ANALYSIS))
-
-        typesAdapter.differ.submitList(typesList)
-        binding.recyclerTabs.adapter=typesAdapter
-
-        binding.recyclerEmployees.setOnClickListener {
-            findNavController().navigate(
-                EmployeeFragmentDirections.actionEmployeeFragmentToProfileFragment()
-            )
-        }
-        binding.btnAdd.setOnClickListener {
-            findNavController().navigate(
-                EmployeeFragmentDirections.actionEmployeeFragmentToUserFragment()
-            )
-        }
-        binding.btnBack.setOnClickListener{
-            findNavController().navigateUp()
-        }
     }
 
+
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
+    }
 
 }

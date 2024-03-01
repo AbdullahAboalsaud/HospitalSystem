@@ -7,16 +7,16 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.hospitalsystem.R
-import com.example.hospitalsystem.databinding.FragmentUserBinding
+import com.example.hospitalsystem.databinding.FragmentNewUserBinding
 import com.google.android.material.datepicker.MaterialDatePicker
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
 
-class UserFragment : Fragment() {
+class NewUserFragment : Fragment() {
 
-    private var _binding: FragmentUserBinding? = null
+    private var _binding: FragmentNewUserBinding? = null
     private val binding get() = _binding!!
 
 
@@ -24,7 +24,7 @@ class UserFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentUserBinding.inflate(inflater)
+        _binding = FragmentNewUserBinding.inflate(inflater)
         return binding.root
     }
 

@@ -1,14 +1,17 @@
 package com.example.hospitalsystem.adapters
 
 import android.graphics.drawable.ColorDrawable
-import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.getColor
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.hospitalsystem.R
+import com.example.hospitalsystem.R.color.black
+import com.example.hospitalsystem.R.color.mintGreen
 import com.example.hospitalsystem.data.ModelCategory
 import com.example.hospitalsystem.databinding.ItemTabsBinding
 
@@ -21,11 +24,11 @@ class AdapterRecyclerTypes : RecyclerView.Adapter<AdapterRecyclerTypes.TypesView
                 tvCategory.text = data.title
                 if (isSelected) {
                     tvCategory.background =
-                        ColorDrawable(itemView.context.resources.getColor(R.color.mintGreen))
-                    tvCategory.resources.getColor(R.color.white)
+                        ColorDrawable(getColor(itemView.context, mintGreen))
+                    tvCategory.setTextColor(itemView.context.resources.getColor(R.color.white))
                 } else {
                     tvCategory.setBackgroundResource(R.drawable.item_tab_background)
-                    tvCategory.resources.getColor(R.color.black)
+                    tvCategory.setTextColor(getColor(itemView.context, black))
                 }
 
             }
@@ -33,6 +36,7 @@ class AdapterRecyclerTypes : RecyclerView.Adapter<AdapterRecyclerTypes.TypesView
     }
 
 
+    // diffUtil
     private val diffUtil = object : DiffUtil.ItemCallback<ModelCategory>() {
         override fun areItemsTheSame(oldItem: ModelCategory, newItem: ModelCategory): Boolean {
             return oldItem.title == newItem.title
@@ -44,6 +48,9 @@ class AdapterRecyclerTypes : RecyclerView.Adapter<AdapterRecyclerTypes.TypesView
     }
 
     val differ = AsyncListDiffer(this, diffUtil)
+
+
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TypesViewHolder {
         return TypesViewHolder(
@@ -66,6 +73,7 @@ class AdapterRecyclerTypes : RecyclerView.Adapter<AdapterRecyclerTypes.TypesView
         val data = differ.currentList[position]
         holder.bind(data, selectedPosition == position)
         holder.binding.tvCategory.setOnClickListener {
+
             if (selectedPosition > 0) {
                 notifyItemChanged(selectedPosition)
             }
